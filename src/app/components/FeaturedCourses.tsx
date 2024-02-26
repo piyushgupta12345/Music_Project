@@ -1,3 +1,4 @@
+"use client";
 import Link from 'next/link'
 import { BackgroundGradient } from './ui/background-gradient'
 import courseData from '../data/music_courses.json';
@@ -16,7 +17,7 @@ interface Course
 
 function FeaturedCourses()
 {
-    const featuredCourses = courseData.courses.filter((course) => course.isFeatured)
+    const featuredCourses = courseData.courses.filter((course:Course) => course.isFeatured)
 
     return (
         <div className="py-12 bg-gray-900">
